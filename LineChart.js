@@ -89,13 +89,11 @@ const parseMetadata = metadata => {
                     series.data.push(row[series.key].raw)
                 })
             })
-
-            titleText = updateTitleText(dimensions, measures)
-
+            
             const myChart = echarts.init(this._root, 'main')
             const option = {
                 title: {
-                    text: titleText
+                    text: "Line Chart"
                 },
                 xAxis: {
                     type: 'category',
