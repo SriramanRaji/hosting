@@ -48,13 +48,7 @@ const parseMetadata = metadata => {
         onCustomWidgetAfterUpdate(changedProps) {
             this.render()
         }
-
-        updateTitleText(dimensions, measures) {
-            let titleText = `${measures.map(measure => measure.label).join(', ')} per ${dimensions.map(dimension => dimension.id).join(', ')}`
-            console.log('Title: ' + titleText)
-            return titleText
-        }
-
+        
         async render() {
             const dataBinding = this.dataBinding
             if (!dataBinding || dataBinding.state !== 'success') { return }
